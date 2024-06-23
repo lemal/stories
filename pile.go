@@ -2,14 +2,21 @@ package main
 
 import "fmt"
 
-//ititialized stacks of wood each 90 in size
+// init ititializesstacks of wood each 90 in size
 
 type wood_log struct {
      number int
      wood_type string
 }
 
+const pine = "pine"
+
+func initialize(i int) wood_log{
+     return wood_log{i, pine}
+}
 //init initializes the logs based on the starting conditions - birch, pine, palm - selects randomly the type
+
+
 func collect() int {
      fmt.Println("found wood")
      kek := wood_log{number:1, wood_type:"pine"}

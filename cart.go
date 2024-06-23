@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
-func load(){
+func load() int {
      fmt.Println("load called")
+     return 1
 }

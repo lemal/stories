@@ -5,7 +5,8 @@ import (
        )
 
 func main(){
-     collect()
-     load()
+     count := 0
+     count += collect()
+     count += load()
      fmt.Println("unloaded")
 }

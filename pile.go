@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// init ititializesstacks of wood each 90 in size
+// init ititializes stacks of wood each 90 in size
 
 type wood_log struct {
      number int
@@ -11,17 +11,15 @@ type wood_log struct {
 
 const pine = "pine"
 
-func initialize(i int) wood_log{
-     return wood_log{i, pine}
+func initialize() wood_log{
+     return wood_log{1, pine}
 }
-//init initializes the logs based on the starting conditions - birch, pine, palm - selects randomly the type
 
+func (w_l *wood_log) insert_num(num int) wood_log {
+     w_l.number = num
+     return *w_l
+}//refactor to make it a receiver method
 
-func collect() int {
-     fmt.Println("found wood")
-     kek := wood_log{number:1, wood_type:"pine"}
-     var lol wood_log
-     lol = wood_log{number:2, wood_type:"birch"}
-     fmt.Println("collected wood", kek, lol)
-     return 1
+func collect(w_l wood_log){
+     fmt.Println("collected wood", w_l.number, w_l.wood_type)
 }
